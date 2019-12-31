@@ -71,7 +71,11 @@ WelcomeAlert.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
 #### Handling the result
 
 ```swift
-class  ViewController: UIViewController, IdScannerControllerDelegate {
+class  ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getResultSdk(data: "Data")
+    }
     func getResultSdk(data : String) -> Void{
         NotificationCenter.default.addObserver(self, selector: #selector(getSIDResult(result:)), name: NSNotification.Name(rawValue: data), object: nil)
     }
