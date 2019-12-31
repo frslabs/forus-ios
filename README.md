@@ -51,136 +51,75 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it t
 ```ruby
 platform :ios, '13.0'
 use_frameworks!
-pod 'Octus'
-pod 'TesseractOCRiOS', '4.0.0'
+pod 'Forus'
 ```
 
-To get the full benefits import `Octus` wherever you import UIKit
+To get the full benefits import `Forus` wherever you import UIKit
 
 ``` swift
 import UIKit
-import Octus
+import Forus
 ```
-#### Supported Tessdata installation
-1. Download and drop ```model.trainneddata``` in tessdata folder of your project.
-2. Congratulations! 
 
 ## Usage example
 
 ```swift
-import Octus
+import Forus
 
-let scanner = IdScannerController(delegate: self)
-    scanner.modalPresentationStyle = .fullScreen
-    scanner.licenceKey = "Your Licence Key"
-    scanner.documentType = Document.PAN.rawValue
-    scanner.documentCountry = Country.in.rawValue
-    scanner.documentSubType = ScanMode.OCR.rawValue
-    present(scanner, animated: false)
+WelcomeAlert.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
 ```
 #### Handling the result
 
 ```swift
 class  ViewController: UIViewController, IdScannerControllerDelegate {
-    func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
-        print("ScanResult: ", results.octusResult)
-        scanner.dismiss(animated:  true, completion:  nil)
+    func getResultSdk(data : String) -> Void{
+        NotificationCenter.default.addObserver(self, selector: #selector(getSIDResult(result:)), name: NSNotification.Name(rawValue: data), object: nil)
     }
-    func  idScannerControllerDidCancel(_ scanner: IdScannerController) {
-        scanner.dismiss(animated:  true, completion:  nil)
+    @objc func getSIDResult(result: NSNotification) {
+        faceData = result.object as? FaceSDKResult
+        isFaceDetected = faceData?.getFaceDetected() ?? false
+        isSmileDetected = faceData?.getSmileDetected() ?? false
+        isEyeBlinkDetected = faceData?.getEyeBlinkDetected() ?? false
+        errorCodeStr = faceData?.getErrorCode() ?? ""
+        faceStr = faceData?.getFaceImagePath() ?? ""
+
+        print("EndUser: ErrorCode: ", errorCodeStr)
+        print("EndUser: isFaceDetected: ", isFaceDetected)
+        print("EndUser: isSmileDetected: ", isSmileDetected)
+        print("EndUser: isEyeBlinkDetected: ", isEyeBlinkDetected)
+        print("EndUser: isFaceStr: ", faceStr)
+        
+        if !(errorCodeStr == "901" || errorCodeStr == "906" || errorCodeStr == "905") {
+            print("EndUser: get image")
+            let faceImage : UIImage? = getImageFromDocDirectory()
+            if faceImage != nil {
+                faceImageView.image = faceImage
+            }
+        } 
     }
-    func idScannerController(_ scanner: IdScannerController, didFailWithError error:      Int{
-        print("ErrorCode: ", error)
-        scanner.dismiss(animated: true, completion: nil)
-    }
+
 }
 ``` 
 
 ## Octus Result
 
 ```swift
-
-     let resultJson = convertToJson(jsonObject: results.octusResult)
-     let resultDict = convertToDictionary(text: resultJson)
-   
-     let result = resultDict!["OctusData"] as! [String:String]   
-     let code = result["code"]
-     
-     let code = result["code"]
-     let docType = result["documentType"]
-     let name1 = result["name1"] ?? ""
-     let name2 = result["name2"] ?? ""
-     let idNumber = result["number"] ?? ""
-     let dob = result["dob"] ?? ""
-     let yob = result["yob"] ?? ""
-     let country = result ["country"] ?? ""
-     let expiry = result["expiry"] ?? ""
-     let address = result["address"] ?? ""
-     let gender = result["gender"] ?? ""
-     let issuedBy = result["issuedBy"] ?? ""
-     let ifsc = result["ifsc"] ?? ""
-     
-     let imagePathFace = result["facePath"] ?? "" 
-     let imagePathFront = result["frontImagePath"] ?? ""
-     let imagePathBack = result["backImagePath"] ?? ""
-     
-     /// Retrieve image from document directory
-            
-     let image = getImageFromDocumentDirectory(imagePath: imagePathFace, fileName: "fileName")
-     
-     `FileNames` - 
-         Front Image - "doc_front.png"
-         Back Image - "doc_back.png"
-         Face Image - "doc_face.png"
-     
-      if imagePath.count > 0 {
-           let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: "fileName")
-           imageView.image = resultImage
-        }
-
-    /// Supported Mathods
-    
-    func convertToJson(jsonObject:NSMutableDictionary) -> String{
-        let jsonData: NSData
-        do {
-            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options:.prettyPrinted) as NSData
-            let jsonString = (String(data: jsonData as Data, encoding: String.Encoding.utf8))!.replacingOccurrences(of: "\\", with: "")
-            return jsonString
-        } catch _ {
-            print ("JSON Failure")
-        }
-        return ""
-    }
-    
-    func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        return nil
-    }
-    
-    func getImageFromDocumentDirectory(imagePath : String, fileName: String) -> UIImage {
+     let faceImage : UIImage? = getImageFromDocDirectory()
+     func getImageFromDocDirectory() -> UIImage{
+        var faceImage = UIImage()
         let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
         let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
         let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
-        if let dirPath = paths.first{
-            let frontimageURL = URL(fileURLWithPath: dirPath).appendingPathComponent(fileName)
-            let frontimage    = UIImage(contentsOfFile: frontimageURL.path)
-            return frontimage ?? UIImage()
+        if let dirPath  = paths.first {
+            let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent("faceImage.png")
+            let image = UIImage(contentsOfFile: imageURL.path)
+            faceImage = image!
         }
-        else {
-            return UIImage()
-        }
-        
+        return faceImage
     }
-
 ```
 
-## Octus Error Codes
+## Forus Error Codes
 
 Error codes and their meaning are tabulated below
 
