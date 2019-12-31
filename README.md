@@ -90,12 +90,6 @@ class  ViewController: UIViewController {
         isSmileDetected = faceData?.getSmileDetected() ?? false
         isEyeBlinkDetected = faceData?.getEyeBlinkDetected() ?? false
         errorCodeStr = faceData?.getErrorCode() ?? ""
-
-        print("EndUser: ErrorCode: ", errorCodeStr)
-        print("EndUser: isFaceDetected: ", isFaceDetected)
-        print("EndUser: isSmileDetected: ", isSmileDetected)
-        print("EndUser: isEyeBlinkDetected: ", isEyeBlinkDetected)
-        print("EndUser: isFaceStr: ", faceStr)
         
         if !(errorCodeStr == "901" || errorCodeStr == "902" || errorCodeStr == "903" || errorCodeStr == "904") {
             print("EndUser: get image")
