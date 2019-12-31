@@ -6,7 +6,6 @@
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
 # Table Of Content
-- [Features](#Features)
 - [Prerequisite](#prerequisite)
 - [Requirements](#requirements)
 - [Permission](#Permission)
@@ -16,12 +15,6 @@ Forus SDK comes with a simple screen with multiple instructions to capture a per
 - [Forus Parameters](#Forus-parameters)
 - [Forus Error Codes](#Forus-error-codes)
 - [Help](#help)
-
-## Features
-
-- [x] Face detection
-- [x] Smile detection
-- [x] Eye blink detection
 
 ## Prerequisite
 
@@ -165,6 +158,8 @@ Error codes and their meaning are tabulated below
   - faceUtils.LEVEL_0 --> It is for face detection.
   - faceUtils.LEVEL_1 --> It is for face and eyeblink detection.
   - faceUtils.LEVEL_2 --> It is for face and smile detection.
+  - faceUtils.LEVEL_3 --> It is for randomaly selected eyeblink and smile detection.
+  - faceUtils.LEVEL_4 --> It is for face and smile detection plus eye blink detection.
   
 ## Help
 
