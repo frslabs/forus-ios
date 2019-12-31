@@ -19,10 +19,9 @@
 
 ## Features
 
-- [x] Auto scanning domestic and internationals ID cards
-- [x] OCR is highly accurate 
-- [x] Scan duration is very less 
-- [x] MRTD document supported
+- [x] Face detection
+- [x] Smile detection
+- [x] Eye blink detection
 
 ## Prerequisite
 
