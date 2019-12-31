@@ -160,10 +160,9 @@ Error codes and their meaning are tabulated below
 - faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"code" (Required)
 
   Level codes are required based on what the user wants to detect.
-  
-  faceUtils.LEVEL_0 --> It is for face detection
-  faceUtils.LEVEL_1 --> It is for face and eyeblink detection
-  faceUtils.LEVEL_2 --> It is for face and smile detection
+  -faceUtils.LEVEL_0 --> It is for face detection
+  -faceUtils.LEVEL_1 --> It is for face and eyeblink detection
+  -faceUtils.LEVEL_2 --> It is for face and smile detection
   
 ## Help
 
