@@ -28,7 +28,7 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 Once you have the license , follow the below instructions for a successful integration of Forus SDK onto your Android Application.
 
-## Android SDK Requirements
+## IOS SDK Requirements
 
 **Minimum SDK Version** -  **15**  and above
 
