@@ -12,9 +12,9 @@
 - [Permission](#Permission)
 - [Installation](#installation)
 - [Usage example](#Usage-example)
-- [Octus Result](#Octus-Result)
-- [Octus Parameters](#octus-parameters)
-- [Octus Error Codes](#octus-error-codes)
+- [Forus Result](#Forus-Result)
+- [Forus Parameters](#Forus-parameters)
+- [Forus Error Codes](#Forus-error-codes)
 - [Help](#help)
 
 ## Features
@@ -70,9 +70,7 @@ import Forus
         faceSdkDict[faceUtils.SHOW_INSTRUCTION] = faceUtils.STATUS_NO
         faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT
         faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY"
-        faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_2 //It is for face and smile detection
-        //faceUtils.LEVEL_0 --> It is for face detection
-        //faceUtils.LEVEL_1 --> It is for face and eyeblink detection
+        faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"Code" // 0 or 1 or 2
        WelcomeAlert.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
     }
 ```
@@ -157,6 +155,9 @@ Accepts the Forus licence key as a String
 It depends upon the users criteria to decide what they need camera front or camera back.
 - faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"code" (Required)
 Level codes are required based on what the user wants to detect
+//faceUtils.LEVEL_0 --> It is for face detection
+//faceUtils.LEVEL_1 --> It is for face and eyeblink detection
+//faceUtils.LEVEL_2 --> It is for face and smile detection
   
 ## Help
 
