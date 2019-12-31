@@ -65,13 +65,28 @@ import Forus
 
 ```swift
 import Forus
-
-WelcomeAlert.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
+@objc func callFaceSDK(){
+        var faceSdkDict = [String : Any]()
+        let faceUtils = FaceUtility()
+        faceSdkDict[faceUtils.SHOW_INSTRUCTION] = faceUtils.STATUS_NO
+        faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT
+        faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY"
+        faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_2 //It is for face and smile detection
+        //faceUtils.LEVEL_0 --> It is for face detection
+        //faceUtils.LEVEL_1 --> It is for face and eyeblink detection
+       WelcomeAlert.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
+    }
 ```
 #### Handling the result
 
 ```swift
 class  ViewController: UIViewController {
+   var faceData:FaceSDKResult? = nil
+   var isFaceDetected = Bool()
+   var isSmileDetected = Bool()
+   var isEyeBlinkDetected = Bool()
+   var errorCodeStr = String()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         getResultSdk(data: "Data")
@@ -85,7 +100,6 @@ class  ViewController: UIViewController {
         isSmileDetected = faceData?.getSmileDetected() ?? false
         isEyeBlinkDetected = faceData?.getEyeBlinkDetected() ?? false
         errorCodeStr = faceData?.getErrorCode() ?? ""
-        faceStr = faceData?.getFaceImagePath() ?? ""
 
         print("EndUser: ErrorCode: ", errorCodeStr)
         print("EndUser: isFaceDetected: ", isFaceDetected)
@@ -93,7 +107,7 @@ class  ViewController: UIViewController {
         print("EndUser: isEyeBlinkDetected: ", isEyeBlinkDetected)
         print("EndUser: isFaceStr: ", faceStr)
         
-        if !(errorCodeStr == "901" || errorCodeStr == "906" || errorCodeStr == "905") {
+        if !(errorCodeStr == "901" || errorCodeStr == "902" || errorCodeStr == "903" || errorCodeStr == "904") {
             print("EndUser: get image")
             let faceImage : UIImage? = getImageFromDocDirectory()
             if faceImage != nil {
@@ -129,71 +143,21 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message                 |
 | -------------- | ---------------------- |
-| 801  | Scan timed out                |
-| 802  | Invalid ID parameters passed|
-| 803  | Camera permission denied    |
-| 804  | Scan was interrupted            |
-| 805  | Octus SDK License got expired             |
-| 806  | Octus SDK License was invalid             |
-| 807  | Invalid camera resolution   |
-| 811  | QR not detected             |
-| 812  | QR parsing failed           |
-| 108  | Internet Unavailable                 |
-| 401  | Api Limit Exceeded            |
-| 429  | Too many request            |
+| 000  | Sucess                |
+| 901  | TimeOut |
+| 902  | not detected eyeblink/smile    |
+| 903  | Forus SDk Licence got expired            |
+| 904  | Forus SDK License was invalid             |
+
 
 ## Forus Parameters
 
-- `scanner.licenceKey = "LICENCE KEY"`   ***(Required)***
-  
-  Accepts the Octus licence key as a `String`
-  
-- `scanner.documentCountry = Country.countryISOcode.rawValue` ***(Required)***
-  
-  Sets the country associated with the Document.
-  
-  For the complete list of supported countries refer ``ISO_3166-1_alpha-2`` format code
- 
-- `scanner.documentType = Document.value.rawValue` ***(Required)***
-  
-  Sets the Document which has to be scanned. Possible values are, 
-  
-  | Value          | Effect                 |
-  | -------------- | ---------------------- |
-  | Document.PAN   | Pan Card               |
-  | Document.ADR   | Aadhaar Card           |
-  | Document.VID   | Voter ID               |
-  | Document.NID   | National ID            |
-  | Document.PPT   | Passport               |
-  | Document.VSA   | Visa                   |
-  | Document.DRV   | Driving Licence        |
-  | Document.CQL   | Cheque Leaf            |
-  | Document.GST   | GST Form               |
-  | Document.IMG_A | Image Capture Aadhaar  |
-  | Document.IMG_H | Plain Image capture    |
-  
-- `scanner.documentSubType = ScanMode.OCR.rawValue` ***(Required)***  
-  
-  Sets the Document Sub Type . Majority of the documents support only `ScanMode.OCR.rawValue` as a sub type. 
-  
-  *Documents where both `ScanMode.OCR.rawValue` and `ScanMode.BARCODE.rawValue` apply are ,*
-  
-  - `Document.ADR`
-   
-  *Documents where only `ScanMode.MRTD.rawValue` apply are ,*
- 
-  - `Document.PPT`
-  - `Document.VSA`
-  
-  
-  Possible values for Sub Type are,
-  
-  | Value            | Effect                         |
-  | ---------------- | ------------------------------ |
-  | ScanMode.OCR.rawValue | Scans the document in OCR mode |
-  | ScanMode.BARCODE.rawValue | Scans the document in QR mode  |
-  | ScanMode.MRTD.rawValue | Scans the document in MRZ mode  |
-  | ScanMode.CROP.rawValue | Scans the document in Crop mode  |
+- faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY" (Required)
+Accepts the Forus licence key as a String
+- faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT (Required)
+It depends upon the users criteria to decide what they need camera front or camera back.
+- faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"code" (Required)
+Level codes are required based on what the user wants to detect
   
 ## Help
 
