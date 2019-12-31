@@ -1,6 +1,6 @@
 
-# Octus SDK
-> Octus SDK uses advanced deep learning technologies for accurate and fast Document/ID scanning and OCR
+# Forus SDK
+> Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 >
 >
 
