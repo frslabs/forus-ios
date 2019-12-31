@@ -151,10 +151,14 @@ Error codes and their meaning are tabulated below
 
 - faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY" (Required)
 Accepts the Forus licence key as a String
+
 - faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT (Required)
 It depends upon the users criteria to decide what they need camera front or camera back.
+
 - faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"code" (Required)
-Level codes are required based on what the user wants to detect
+
+Level codes are required based on what the user wants to detect.
+
 //faceUtils.LEVEL_0 --> It is for face detection
 //faceUtils.LEVEL_1 --> It is for face and eyeblink detection
 //faceUtils.LEVEL_2 --> It is for face and smile detection
