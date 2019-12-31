@@ -101,7 +101,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
 }
 ``` 
 
-## Octus Result
+## Forus Result
 
 ```swift
      let faceImage : UIImage? = getImageFromDocDirectory()
@@ -138,7 +138,7 @@ Error codes and their meaning are tabulated below
 | 401  | Api Limit Exceeded            |
 | 429  | Too many request            |
 
-## Octus Parameters
+## Forus Parameters
 
 - `scanner.licenceKey = "LICENCE KEY"`   ***(Required)***
   
