@@ -156,13 +156,15 @@ Error codes and their meaning are tabulated below
 - faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT (Required).
 
   It depends upon the users criteria to decide what they need camera front or camera back.
+  - faceUtils.CAMERA_FRONT --> for front camera.
+  - faceUtils.CAMERA_BACK --> for back camera.
 
 - faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"code" (Required)
 
   Level codes are required based on what the user wants to detect.
-  -faceUtils.LEVEL_0 --> It is for face detection
-  -faceUtils.LEVEL_1 --> It is for face and eyeblink detection
-  -faceUtils.LEVEL_2 --> It is for face and smile detection
+  - faceUtils.LEVEL_0 --> It is for face detection.
+  - faceUtils.LEVEL_1 --> It is for face and eyeblink detection.
+  - faceUtils.LEVEL_2 --> It is for face and smile detection.
   
 ## Help
 
