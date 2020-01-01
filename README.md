@@ -16,15 +16,15 @@ Forus SDK comes with a simple screen with multiple instructions to capture a per
 - [Forus Error Codes](#Forus-error-codes)
 - [Help](#help)
 
-## Prerequisite
+## Prerequisites
 
 You will need a valid license to use the Forus SDK, which can be obtained by contacting support@frslabs.com .
 
 Depending on the license - offline or online - you have opted for, the ping functionality to billing servers will be disabled or enabled. For instance, if you have opted for the offline SDK model, then there will be no server ping needed to our billing server to bill you. However, if you have chosen a transaction based pricing, then after each transaction, a ping request will be made to our billing server. This cannot be overrided by the App. A point to note is that if the ping transaction fails for any reason, the whole transaction will be void without any results from the SDK.
 
-Once you have the license , follow the below instructions for a successful integration of Forus SDK onto your IOS Application.
+Once you have the license, follow the below instructions for a successful integration of Forus SDK onto your IOS Application.
 
-## Requirements
+## Minimum Requirements
 
 - iOS 10.0+
 - Xcode 11.2
@@ -38,7 +38,7 @@ In Info.plist file add following code to allow your application to access iPhone
 ## Installation
 
 #### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it to your `Podfile`:
+You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it to your `Podfile`:
 
 ```ruby
 platform :ios, '12.0'
@@ -142,13 +142,13 @@ Error codes and their meaning are tabulated below
 
 - faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT (Required).
 
-  It depends upon the users criteria to decide what they need camera front or camera back.
+The user can choose to invoke either the front or the back camera depending on the flow of the App.
   - faceUtils.CAMERA_FRONT --> for front camera.
   - faceUtils.CAMERA_BACK --> for back camera.
 
 - faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_"code" (Required)
 
-  Level codes are required based on what the user wants to detect.
+The user can configure the challenge levels needed for liveness checks.
   - faceUtils.LEVEL_0 --> It is for face detection.
   - faceUtils.LEVEL_1 --> It is for face and eyeblink detection.
   - faceUtils.LEVEL_2 --> It is for face and smile detection.
