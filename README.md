@@ -41,7 +41,7 @@ In Info.plist file add following code to allow your application to access iPhone
 You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '13.0'
+platform :ios, '12.0'
 use_frameworks!
 pod 'Forus'
 ```
@@ -127,11 +127,11 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message                 |
 | -------------- | ---------------------- |
-| 000  | Sucess                |
-| 901  | TimeOut |
-| 902  | not detected eyeblink/smile    |
-| 903  | Forus SDk Licence got expired            |
-| 904  | Forus SDK License was invalid             |
+| 000  | Sucess  |
+| 901  | Timeout |
+| 902  | No eyeblink/smile detected  |
+| 903  | Licence expired   |
+| 904  | Invalid licence   |
 
 
 ## Forus Parameters
@@ -152,8 +152,8 @@ Error codes and their meaning are tabulated below
   - faceUtils.LEVEL_0 --> It is for face detection.
   - faceUtils.LEVEL_1 --> It is for face and eyeblink detection.
   - faceUtils.LEVEL_2 --> It is for face and smile detection.
-  - faceUtils.LEVEL_3 --> It is for randomaly selected eyeblink and smile detection.
-  - faceUtils.LEVEL_4 --> It is for face and smile detection plus eye blink detection.
+  - faceUtils.LEVEL_3 --> It is for randomaly selected eyeblink and smile detection(Future release).
+  - faceUtils.LEVEL_4 --> It is for face and smile detection plus eye blink detection(Future release).
   
 ## Help
 
