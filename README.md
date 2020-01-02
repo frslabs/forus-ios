@@ -5,6 +5,8 @@
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
+You can find the release history at [Changelog](CHANGELOG.md)
+
 # Table Of Content
 - [Prerequisite](#prerequisite)
 - [Requirements](#requirements)
