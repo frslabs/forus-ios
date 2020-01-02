@@ -43,7 +43,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 ```ruby
 platform :ios, '12.0'
 use_frameworks!
-pod 'Forus'
+pod 'FaceSDKFramework'
 ```
 
 To get the full benefits import `Forus` wherever you import UIKit
@@ -92,7 +92,6 @@ class  ViewController: UIViewController {
         errorCodeStr = faceData?.getErrorCode() ?? ""
         
         if !(errorCodeStr == "901" || errorCodeStr == "902" || errorCodeStr == "903" || errorCodeStr == "904") {
-            print("EndUser: get image")
             let faceImage : UIImage? = getImageFromDocDirectory()
             if faceImage != nil {
                 faceImageView.image = faceImage
