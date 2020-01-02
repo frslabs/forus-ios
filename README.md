@@ -43,20 +43,20 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 ```ruby
 platform :ios, '12.0'
 use_frameworks!
-pod 'FaceSDKFramework'
+pod 'Forus'
 ```
 
 To get the full benefits import `Forus` wherever you import UIKit
 
 ``` swift
 import UIKit
-import Forus
+import FaceSDKFramework
 ```
 
 ## Usage example
 
 ```swift
-import Forus
+import FaceSDKFramework
 @objc func callFaceSDK(){
     var faceSdkDict = [String : Any]()
     let faceUtils = FaceUtility()
