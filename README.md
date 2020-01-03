@@ -43,6 +43,7 @@ In Info.plist file add following code to allow your application to access iPhone
 You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it to your `Podfile`:
 
 ```ruby
+source 'https://gitlab.com/frslabs-public/ios/forus.git'
 platform :ios, '12.0'
 use_frameworks!
 pod 'Forus'
