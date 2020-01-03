@@ -1,5 +1,5 @@
 
-# FORUS IOS SDK
+# FORUS iOS SDK
 
 ![version](https://img.shields.io/badge/version-v1.0.0-blue)
 
