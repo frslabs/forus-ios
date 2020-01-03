@@ -1,5 +1,5 @@
 
-# Forus SDK
+# FORUS SDK
 
 ![version](https://img.shields.io/badge/version-v1.0.0-blue)
 
