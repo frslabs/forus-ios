@@ -153,7 +153,7 @@ The user can configure the challenge levels needed for liveness checks.
   - faceUtils.LEVEL_0 --> It is for face detection.
   - faceUtils.LEVEL_1 --> It is for face and eyeblink detection.
   - faceUtils.LEVEL_2 --> It is for face and smile detection.
-  - faceUtils.LEVEL_3 --> It is for randomaly selected eyeblink and smile detection(Future release).
+  - faceUtils.LEVEL_3 --> It is for randomaly selected eyeblink and smile detection.
   - faceUtils.LEVEL_4 --> It is for face and smile detection plus eye blink detection(Future release).
   
 ## Help
