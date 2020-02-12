@@ -46,7 +46,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 source 'https://gitlab.com/frslabs-public/ios/forus.git'
 platform :ios, '12.0'
 use_frameworks!
-pod 'Forus'
+pod 'Forus', '1.0.0'
 ```
 
 To get the full benefits import `Forus` wherever you import UIKit
