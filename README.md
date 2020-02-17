@@ -152,11 +152,11 @@ The user can choose to invoke either the front or the back camera depending on t
 - faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_Code (Required)
 
 The user can configure the challenge levels needed for liveness check
-  - faceUtils.LEVEL_0 --> It is for face detection.
-  - faceUtils.LEVEL_1 --> It is for face and eyeblink detection.
-  - faceUtils.LEVEL_2 --> It is for face and smile detection.
-  - faceUtils.LEVEL_3 --> It is for randomaly selected eyeblink and smile detection.
-  - faceUtils.LEVEL_4 --> It is for face and smile detection plus eye blink detection(Future release).
+  - faceUtils.LEVEL_1 --> It is for face detection.
+  - faceUtils.LEVEL_2 --> It is for face and eyeblink detection.
+  - faceUtils.LEVEL_3 --> It is for face and smile detection.
+  - faceUtils.LEVEL_4 --> It is for randomaly selected eyeblink and smile detection.
+  - faceUtils.LEVEL_5 --> It is for face and smile detection plus eye blink detection(Future release).
   
 ## Help
 
