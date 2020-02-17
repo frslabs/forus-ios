@@ -67,7 +67,7 @@ import FaceSDKFramework
     faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT
     faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY"
     faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_Code // 0 or 1 or 2, Eg: "faceUtils.LEVEL_2"
-    WelcomeAlert.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
+    Forus.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
 }
 ```
 #### Handling the result
