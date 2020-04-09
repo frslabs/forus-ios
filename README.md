@@ -1,7 +1,7 @@
 
 # FORUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v1.0.1-blue)
+![version](https://img.shields.io/badge/version-v1.1.0-blue)
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
@@ -46,7 +46,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 source 'https://gitlab.com/frslabs-public/ios/forus.git'
 platform :ios, '12.0'
 use_frameworks!
-pod 'Forus', '1.0.1'
+pod 'Forus', '1.1.0'
 ```
 
 To get the full benefits import `Forus` wherever you import UIKit
