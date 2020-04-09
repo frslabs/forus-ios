@@ -63,9 +63,8 @@ import FaceSDKFramework
 @objc func callFaceSDK(){
     var faceSdkDict = [String : Any]()
     let faceUtils = FaceUtility()
-    faceSdkDict[faceUtils.SHOW_INSTRUCTION] = faceUtils.STATUS_NO
-    faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT
     faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY"
+    faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT    
     faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_Code // 1 or 2 or 3, Eg: "faceUtils.LEVEL_3"
     Forus.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
 }
