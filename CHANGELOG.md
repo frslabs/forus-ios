@@ -10,3 +10,7 @@ Forus SDK comes with a simple screen with multiple instructions to capture a per
 
 Pod dependencies has been addressed.
 
+## **v1.1.0** - *09-04-2020*
+
+SDK Licence mechanism changed.
+
