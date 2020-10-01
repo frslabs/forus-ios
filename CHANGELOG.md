@@ -4,7 +4,7 @@
 
 ## **v1.3.0** - *15-05-2020*
 
-Face detection mechanism improved
+Face detection mechanism improved.
 
 ## **v1.2.0** - *11-05-2020*
 
