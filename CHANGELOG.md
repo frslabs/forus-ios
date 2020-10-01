@@ -2,7 +2,7 @@
 # Changelog
 
 
-## **v1.3.0** - *30-05-2020*
+## **v1.3.0** - *15-05-2020*
 
 Face detection mechanism improved
 
