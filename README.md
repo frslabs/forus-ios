@@ -44,11 +44,13 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 
 ```ruby
 source 'https://gitlab.com/frslabs-public/ios/forus.git'
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '12.0'
+target '<Your Target Name>' do
 use_frameworks!
 pod 'Forus', '1.3.0'
+end
 ```
-
 To get the full benefits import `Forus` wherever you import UIKit
 
 ``` swift
