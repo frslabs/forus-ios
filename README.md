@@ -1,7 +1,7 @@
 
 # FORUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v1.3.0-blue)
+![version](https://img.shields.io/badge/version-v2.0.0-blue)
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
@@ -28,7 +28,7 @@ Once you have the license, follow the below instructions for a successful integr
 
 ## Minimum Requirements
 
-- iOS 10.0+
+- iOS 11.0+
 - Xcode 11.2
 
 ## Permission
@@ -45,84 +45,56 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 ```ruby
 source 'https://gitlab.com/frslabs-public/ios/forus.git'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '12.0'
+platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'Forus', '1.3.0'
+pod 'Forus', '2.0.0'
 end
 ```
 To get the full benefits import `Forus` wherever you import UIKit
 
 ``` swift
 import UIKit
-import FaceSDKFramework
+import Forus
 ```
 
 ## Usage example
 
 ```swift
-import FaceSDKFramework
+import Forus
+
 @objc func callFaceSDK(){
-    var faceSdkDict = [String : Any]()
-    let faceUtils = FaceUtility()
-    faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY"
-    faceSdkDict[utility.SHOW_INSTRUCTION] = utility.STATUS_YES
-    faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT    
-    faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_Code // 1 or 2 or 3, Eg: "faceUtils.LEVEL_3"
-    Forus.performSegueToVerifyEnrollment(caller: self, params: faceSdkDict)
+     let forus = ForusController(delegate:self)
+        forus.modalPresentationStyle = .fullScreen
+        forus.licenceKey = licenceKey_offline
+        forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink)
+        present(forus, animated: false, completion: nil)
 }
 ```
 #### Handling the result
 
 ```swift
-class  ViewController: UIViewController {
-   var faceData:FaceSDKResult? = nil
-   var isFaceDetected = Bool()
-   var isSmileDetected = Bool()
-   var isEyeBlinkDetected = Bool()
-   var errorCodeStr = String()
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getResultSdk(data: "Data")
+
+class ViewController: UIViewController, ForusControllerDelegate {
+
+    func forusControllerSuccess(_ scanner: ForusController, didFinishScanningWithResults results: forusResult) {
+        let faceImage = results.faceResult
+        let isFaceDetected = results.isFaceDetected
+        let isSmileDetected = results.isSmileDetected
+        let isEyeBlinkDetected = results.isEyeBlinkDetected
+        let timeStamp = results.timeStamp  
     }
-    func getResultSdk(data : String) -> Void{
-        NotificationCenter.default.addObserver(self, selector: #selector(getSIDResult(result:)), name: NSNotification.Name(rawValue: data), object: nil)
-    }
-    @objc func getSIDResult(result: NSNotification) {
-        faceData = result.object as? FaceSDKResult
-        isFaceDetected = faceData?.getFaceDetected() ?? false
-        isSmileDetected = faceData?.getSmileDetected() ?? false
-        isEyeBlinkDetected = faceData?.getEyeBlinkDetected() ?? false
-        errorCodeStr = faceData?.getErrorCode() ?? ""
+    
+    func forusControllerDidCancel(_ scanner: ForusController) {
         
-        if !(errorCodeStr == "901" || errorCodeStr == "902" || errorCodeStr == "903" || errorCodeStr == "904") {
-            let faceImage : UIImage? = getImageFromDocDirectory()
-            if faceImage != nil {
-                faceImageView.image = faceImage
-            }
-        } 
     }
-
-}
+    
+    func forusControllerFailed(_ scanner: ForusController, didFailWithError error: Int) {
+        print("Forus Error Code -> ", error)
+    }
+    
+    }
 ``` 
-
-## Forus Result
-
-```swift
-     func getImageFromDocDirectory() -> UIImage{
-        var faceImage = UIImage()
-        let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
-        let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
-        let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
-        if let dirPath  = paths.first {
-            let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent("faceImage.png")
-            let image = UIImage(contentsOfFile: imageURL.path)
-            faceImage = image!
-        }
-        return faceImage
-    }
-```
 
 ## Forus Error Codes
 
@@ -130,39 +102,26 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message                 |
 | -------------- | ---------------------- |
-| 000  | Sucess  |
-| 901  | Timeout |
-| 902  | No eyeblink/smile detected  |
-| 903  | Licence expired   |
-| 904  | Invalid licence   |
-| 905  | Transaction failed  |
-
+| 901  | Camera permission denied  |
+| 902 | Licence invalid |
+| 903  |  Licence expired |
+| 904  | Face not detected  |
+| 905  | Liveness check failed  |
+| 906  | Transaction failed/Unable to ping |
 
 ## Forus Parameters
 
-- faceSdkDict[faceUtils.LICENCE_KEY] = "LICENCE KEY" (Required).
+- forus.licenceKey = "LICENCE KEY" (Required).
 
   Accepts the Forus licence key as a String
+
+- forus.livenessMode = LivenessMode.smile.rawValue
+  Check for smile detection
   
-- faceSdkDict[utility.SHOW_INSTRUCTION] = utility.STATUS_YES  
-
-  - utility.STATUS_YES --> Enable instriction page 
-  - utility.STATUS_NO --> Disable instruction page
-
-- faceSdkDict[faceUtils.CAMERA_MODE] = faceUtils.CAMERA_FRONT (Required).
-
-The user can choose to invoke either the front or the back camera depending on the flow of the App.
-  - faceUtils.CAMERA_FRONT --> for front camera.
-  - faceUtils.CAMERA_BACK --> for back camera.
-
-- faceSdkDict[faceUtils.SECURITY_LEVEL] = faceUtils.LEVEL_Code (Required)
-
-The user can configure the challenge levels needed for liveness check
-  - faceUtils.LEVEL_1 --> It is for face detection.
-  - faceUtils.LEVEL_2 --> It is for face and eyeblink detection.
-  - faceUtils.LEVEL_3 --> It is for face and smile detection.
-  - faceUtils.LEVEL_4 --> It is for randomaly selected eyeblink and smile detection.
-  - faceUtils.LEVEL_5 --> It is for face and smile detection plus eye blink detection(Future release).
+  forus.livenessMode = LivenessMode.eyeBlink.rawValue
+  Check for eyeblink detection 
+  
+  
   
 ## Help
 
