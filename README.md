@@ -102,12 +102,12 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message                 |
 | -------------- | ---------------------- |
-| 901  | Camera permission denied  |
-| 902 | Licence invalid |
-| 903  |  Licence expired |
-| 904  | Face not detected  |
-| 905  | Liveness check failed  |
-| 906  | Transaction failed / Unable to ping |
+| 301  | Camera permission denied  |
+| 302 | Licence invalid |
+| 303  |  Licence expired |
+| 304  | Face not detected  |
+| 305  | Liveness check failed  |
+| 306  | Transaction failed / Unable to ping |
 
 ## Forus Parameters
 
