@@ -117,11 +117,11 @@ Error codes and their meaning are tabulated below
 
 - forus.livenessMode = LivenessMode.smile.rawValue
 
-  -- Check for smile detection
+  -- This mode offer liveness check through smile detection on face
   
   forus.livenessMode = LivenessMode.eyeBlink.rawValue
   
-  -- Check for eyeblink detection 
+  -- This mode offer liveness check through eyeblink detection on face
   
   
   
