@@ -66,7 +66,7 @@ import Forus
 @objc func callFaceSDK(){
      let forus = ForusController(delegate:self)
         forus.modalPresentationStyle = .fullScreen
-        forus.licenceKey = licenceKey_offline
+        forus.licenceKey = "LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink)
         present(forus, animated: false, completion: nil)
 }
