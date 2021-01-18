@@ -80,12 +80,14 @@ import Forus
 ```swift
 import Forus
 
-@objc func callFaceSDK(){
+@objc func invokeForus(){
+
      let forus = ForusController(delegate:self)
         forus.modalPresentationStyle = .fullScreen
         forus.licenceKey = "LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink)
         present(forus, animated: false, completion: nil)
+        
 }
 ```
 #### Handling the result
