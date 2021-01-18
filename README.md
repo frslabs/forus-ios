@@ -116,10 +116,12 @@ Error codes and their meaning are tabulated below
   Accepts the Forus licence key as a String
 
 - forus.livenessMode = LivenessMode.smile.rawValue
-  Check for smile detection
+
+  -- Check for smile detection
   
   forus.livenessMode = LivenessMode.eyeBlink.rawValue
-  Check for eyeblink detection 
+  
+  -- Check for eyeblink detection 
   
   
   
