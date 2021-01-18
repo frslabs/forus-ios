@@ -107,7 +107,7 @@ Error codes and their meaning are tabulated below
 | 903  |  Licence expired |
 | 904  | Face not detected  |
 | 905  | Liveness check failed  |
-| 906  | Transaction failed/Unable to ping |
+| 906  | Transaction failed / Unable to ping |
 
 ## Forus Parameters
 
