@@ -66,7 +66,7 @@ password <YOUR_PASSOWRD>
 3. In terminal enter below command to install the pod
 pod install or pod update.
 
-4. Connect with physical device to build and run Octus, It will not build/run in simulator due to camera dependency.
+4. Connect with physical device to build and run Forus, It will not build/run in simulator due to camera dependency.
 
 To get the full benefits import `Forus` wherever you import UIKit
 
@@ -120,7 +120,7 @@ Error codes and their meaning are tabulated below
 | Code          | Message                 |
 | -------------- | ---------------------- |
 | 301  | Camera permission denied  |
-| 302 | Licence invalid |
+| 302  | Licence invalid |
 | 303  |  Licence expired |
 | 304  | Face not detected  |
 | 305  | Liveness check failed  |
