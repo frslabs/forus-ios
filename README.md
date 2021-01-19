@@ -143,7 +143,9 @@ Error codes and their meaning are tabulated below
 
   Accepts the Forus licence key as a String
 
-- forus.livenessMode = LivenessMode.smile.rawValue ***(Required)***
+- forus.livenessMode = LivenessMode.XXX  ***(Required)***
+
+  - forus.livenessMode = LivenessMode.smile.rawValue 
 
     This mode offer liveness check through smile detection on face
   
