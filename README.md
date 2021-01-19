@@ -97,11 +97,8 @@ import Forus
 class ViewController: UIViewController, ForusControllerDelegate {
 
     func forusControllerSuccess(_ scanner: ForusController, didFinishScanningWithResults results: forusResult) {
-        let faceImage = results.faceResult
-        let isFaceDetected = results.isFaceDetected
-        let isSmileDetected = results.isSmileDetected
-        let isEyeBlinkDetected = results.isEyeBlinkDetected
-        let timeStamp = results.timeStamp  
+         print("Forus Result: ", results)
+      
     }
     
     func forusControllerDidCancel(_ scanner: ForusController) {
@@ -109,11 +106,23 @@ class ViewController: UIViewController, ForusControllerDelegate {
     }
     
     func forusControllerFailed(_ scanner: ForusController, didFailWithError error: Int) {
-        print("Forus Error Code -> ", error)
+        print("Forus Error Code: ", error)
     }
     
     }
 ``` 
+
+## Octus Result
+
+```swift
+
+      let faceImage = results.faceResult   // Face image UIImage format 
+      let isFaceDetected = results.isFaceDetected   // Boolean value for face detection
+      let isSmileDetected = results.isSmileDetected   // Boolean value for smile detection on face
+      let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
+      let timeStamp = results.timeStamp    // Timestamp, Int64 format 
+     
+```     
 
 ## Forus Error Codes
 
