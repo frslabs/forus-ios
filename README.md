@@ -116,11 +116,11 @@ class ViewController: UIViewController, ForusControllerDelegate {
 
 ```swift
 
-      let faceImage = results.faceResult   // Face image UIImage format 
-      let isFaceDetected = results.isFaceDetected   // Boolean value for face detection
-      let isSmileDetected = results.isSmileDetected   // Boolean value for smile detection on face
-      let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
-      let timeStamp = results.timeStamp    // Timestamp, Int64 format 
+    let faceImage = results.faceResult   // Face image UIImage format 
+    let isFaceDetected = results.isFaceDetected   // Boolean value for face detection
+    let isSmileDetected = results.isSmileDetected   // Boolean value for smile detection on face
+    let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
+    let timeStamp = results.timeStamp    // Timestamp, Int64 format 
      
 ```     
 
