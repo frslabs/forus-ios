@@ -139,15 +139,15 @@ Error codes and their meaning are tabulated below
 
 ## Forus Parameters
 
-- forus.licenceKey = "LICENCE KEY" (Required).
+- forus.licenceKey = "LICENCE KEY" ***(Required)***
 
   Accepts the Forus licence key as a String
 
-- forus.livenessMode = LivenessMode.smile.rawValue (Required).
+- forus.livenessMode = LivenessMode.smile.rawValue ***(Required)***
 
     This mode offer liveness check through smile detection on face
   
-  forus.livenessMode = LivenessMode.eyeBlink.rawValue
+  - forus.livenessMode = LivenessMode.eyeBlink.rawValue
   
     This mode offer liveness check through eyeblink detection on face
   
