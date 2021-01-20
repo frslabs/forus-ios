@@ -3,7 +3,8 @@
 
 ## **v2.0.0** - *18-01-2021*
 
-Change code base to swift 5. 
+Change code base to swift 5.
+
 Rewrite liveness detection (smile and eye blink) mechanism.
 
 ## **v1.3.0** - *15-05-2020*
