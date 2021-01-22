@@ -1,6 +1,13 @@
 
 # Changelog
 
+## **v2.1.0** - *22-01-2021*
+
+TimeStamp addition on Face.
+Bug fixes.
+
+
+
 ## **v2.0.0** - *18-01-2021*
 
 Change code base to swift 5.
