@@ -86,7 +86,7 @@ import Forus
         forus.modalPresentationStyle = .fullScreen
         forus.licenceKey = "LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink)
-        forus.isTimeOnFaceNeeded = true (true/false Boolean)
+        forus.isTimeOnFaceNeeded = true / false (Boolean)
         forus.timestampColor = UIcolor.yellow (Color)
         forus.timestampFontSize = 30 (CGfloat)
         present(forus, animated: false, completion: nil)
