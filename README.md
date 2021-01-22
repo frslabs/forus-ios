@@ -130,12 +130,13 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message                 |
 | -------------- | ---------------------- |
-| 301  | Camera permission denied  |
 | 302  | Licence invalid |
 | 303  |  Licence expired |
-| 304  | Face not detected  |
-| 305  | Liveness check failed  |
-| 306  | Transaction failed / Unable to ping |
+| 305  | Camera permission denied  |
+| 307 | Face not detected  |
+| 308  | Transaction failed / Unable to ping |
+| 310  | No internet connection |
+| 311  | Liveness check failed  |
 
 ## Forus Parameters
 
