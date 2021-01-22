@@ -153,7 +153,13 @@ Error codes and their meaning are tabulated below
   - forus.livenessMode = LivenessMode.eyeBlink.rawValue
   
     This mode offer liveness check through eyeblink detection on face
-  
+  - forus.isTimeOnFaceNeeded = true / false (Boolean) ***(Optional)***
+     If we need time to show on face we need to pass true boolean.
+     If not needed need to pass false.
+ - forus.timestampColor = .white (Color) ***(Optional)***
+    We can pass which ever color we want to display on Face.
+ - forus.timestampFontSize = 20.0 (Font) ***(Optional)***
+     We can pass Font size for the timestamp Text.
   
   
 ## Help
