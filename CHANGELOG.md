@@ -12,31 +12,30 @@
 
 ## **v2.1.0** - *22-01-2021*
 
-TimeStamp addition on Face.
-
-Bug fixes.
+- TimeStamp addition on Face.
+- Bug fixes.
 
 ## **v2.0.0** - *18-01-2021*
 
-Change code base to swift 5.
+- Change code base to swift 5.
 
 Rewrite liveness detection (smile and eye blink) mechanism.
 
 ## **v1.3.0** - *15-05-2020*
 
-Face detection mechanism improved.
+- Face detection mechanism improved.
 
 ## **v1.2.0** - *11-05-2020*
 
-Bug fixes.
+- Bug fixes.
 
 ## **v1.1.0** - *09-04-2020*
 
-SDK Licence mechanism changed.
+- SDK Licence mechanism changed.
 
 ## **v1.0.1** - *17-02-2020*
 
-Pod dependencies has been addressed.
+- Pod dependencies has been addressed.
 
 ## **v1.0.0** - *03-1-2020*
 ### Initial Release
