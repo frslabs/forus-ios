@@ -1,6 +1,15 @@
 
 # Changelog
 
+## **v2.1.1** - *19-02-2021*
+
+- Smile and eye blink Capture accuracy is improved.
+- Multiple face found.
+- Face too close.
+- Face too far.
+- Message visibility delay fixes.
+- Bug fixes.
+
 ## **v2.1.0** - *22-01-2021*
 
 TimeStamp addition on Face.
