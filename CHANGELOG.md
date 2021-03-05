@@ -7,7 +7,6 @@
 - Multiple face found.
 - Face too close.
 - Face too far.
-- Message visibility delay fixes.
 - Bug fixes.
 
 ## **v2.1.0** - *22-01-2021*
