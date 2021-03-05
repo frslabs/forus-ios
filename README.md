@@ -48,7 +48,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'Forus', '2.1.1'
+pod 'Forus', '2.2.0'
 end
 ```
 
