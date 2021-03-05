@@ -89,6 +89,7 @@ import Forus
         forus.isTimeOnFaceNeeded = true / false (Boolean)
         forus.timestampColor = UIcolor.yellow (Color)
         forus.timestampFontSize = 30.0 (CGfloat)
+        forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (default) (String)
         present(forus, animated: false, completion: nil)
         
 }
@@ -166,6 +167,11 @@ Error codes and their meaning are tabulated below
  - forus.timestampFontSize = 20.0 (Font) ***(Optional)***
  
      We can pass Font size for the timestamp Text.
+     
+ - forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (String) ***(Optional)***
+     
+     We can pass time Format for timestamp on Face.
+     
   
   
 ## Help
