@@ -1,5 +1,7 @@
 
 # Changelog
+## **v2.2.0** - *05-03-2021*
+ - Time format addition.
 
 ## **v2.1.1** - *19-02-2021*
 
