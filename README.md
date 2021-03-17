@@ -166,8 +166,9 @@ Error codes and their meaning are tabulated below
      
  - forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
 
-    If we need camera mode Front then input should be "forus.setCamera = Utility.front.rawValue"
-    If we need camera mode Back then input should be "forus.setCamera = Utility.back.rawValue"
+    - If we need camera mode Front then input should be "forus.setCamera = Utility.front.rawValue"
+    
+    - If we need camera mode Back then input should be "forus.setCamera = Utility.back.rawValue"
 
  - forus.timestampColor = .white (Color) ***(Optional)***
  
