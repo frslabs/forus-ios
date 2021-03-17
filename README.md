@@ -1,7 +1,7 @@
 
 # FORUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v2.2.0-blue)
+![version](https://img.shields.io/badge/version-v2.3.0-blue)
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
@@ -48,7 +48,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'Forus', '2.2.0'
+pod 'Forus', '2.3.0'
 end
 ```
 
@@ -87,6 +87,7 @@ import Forus
         forus.modalPresentationStyle = .fullScreen
         forus.licenceKey = "LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink)
+        forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
         forus.isTimeOnFaceNeeded = true / false (Boolean)
         forus.timestampColor = UIcolor.yellow (Color)
         forus.timestampFontSize = 30.0 (CGfloat)
@@ -162,6 +163,12 @@ Error codes and their meaning are tabulated below
   
      If we need time to show on face we need to pass true boolean.
      If not needed need to pass false.
+     
+ - forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
+
+    If we need camera mode Front then input should be "forus.setCamera = Utility.front.rawValue"
+    If we need camera mode Back then input should be "forus.setCamera = Utility.back.rawValue"
+
  - forus.timestampColor = .white (Color) ***(Optional)***
  
     We can pass which ever color we want to display on Face.
