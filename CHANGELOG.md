@@ -2,7 +2,7 @@
 # Changelog
 ## **v2.3.0** - *17-03-2021*
  - Back camera support for Face capture.
- - 
+ 
 ## **v2.2.0** - *05-03-2021*
  - Time format addition.
 
