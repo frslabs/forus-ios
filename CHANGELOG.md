@@ -1,5 +1,9 @@
 
 # Changelog
+## **v2.4.1** - *14-05-2021*
+ - Face detection Speed increased.
+ - Bug fixes and UI fixes.
+
 ## **v2.3.0** - *17-03-2021*
  - Back camera support for Face capture.
  
