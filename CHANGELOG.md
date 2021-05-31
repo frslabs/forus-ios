@@ -1,5 +1,8 @@
 
 # Changelog
+## **v2.4.2** - *27-05-2021*
+ - Bug fixes.
+
 ## **v2.4.1** - *14-05-2021*
  - Face detection Speed increased.
  - Bug fixes and UI fixes.
