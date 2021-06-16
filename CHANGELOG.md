@@ -1,6 +1,9 @@
 
 # Changelog
 
+## **v2.4.4** - *16-06-2021*
+ - Updated with latest version of xcode.
+
 ## **v2.4.2** - *27-05-2021*
  - Bug fixes.
 
