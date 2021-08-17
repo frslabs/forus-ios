@@ -137,6 +137,7 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message                 |
 | -------------- | ---------------------- |
+| 301  | Invalid settings  |
 | 302  | Licence invalid |
 | 303  |  Licence expired |
 | 305  | Camera permission denied  |
