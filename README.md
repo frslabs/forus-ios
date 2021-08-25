@@ -138,15 +138,16 @@ Error codes and their meaning are tabulated below
 | Code          | Message                 |
 | -------------- | ---------------------- |
 | 301  | Invalid settings  |
-| 302  | Licence invalid |
-| 303  |  Licence expired |
+| 302  | Licence invalid   |
+| 303  |  Licence expired  |
 | 305  | Camera permission denied  |
-| 307 | Face not detected  |
+| 307  | Face not detected  |
 | 308  | Transaction failed / Unable to ping |
 | 310  | No internet connection |
 | 311  | Smile is not detected  |
 | 312  | EyeBlink is not detected   |
 | 313  | Smile and EyeBlink not detected   |
+| 314  | Location Permision denied   |
 
 ## Forus Parameters
 
