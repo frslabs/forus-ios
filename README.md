@@ -143,8 +143,9 @@ Error codes and their meaning are tabulated below
 | 305  | Camera permission denied  |
 | 307  | Face not detected  |
 | 308  | Transaction failed / Unable to ping |
-| 310  | No internet connection |
-| 314  | Location Permision denied   |
+| 309  | Transaction limit exceeded                      |
+| 310  | No internet connection                          |
+| 311  | Required permission denied                      |
 
 ## Forus Parameters
 
