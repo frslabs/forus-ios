@@ -144,9 +144,6 @@ Error codes and their meaning are tabulated below
 | 307  | Face not detected  |
 | 308  | Transaction failed / Unable to ping |
 | 310  | No internet connection |
-| 311  | Smile is not detected  |
-| 312  | EyeBlink is not detected   |
-| 313  | Smile and EyeBlink not detected   |
 | 314  | Location Permision denied   |
 
 ## Forus Parameters
