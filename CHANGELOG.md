@@ -1,6 +1,10 @@
 
 # Changelog
 
+## **v4.0.0** - *27-08-2021*
+ - Antispoof feature added.
+ - Bug fixes and UI improvements.
+
 ## **v2.4.4** - *16-06-2021*
  - Updated with latest version of xcode.
 
