@@ -88,6 +88,7 @@ import Forus
         forus.modalPresentationStyle = .fullScreen
         forus.licenceKey = "LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
+        forus.callAntiSpoof = true / false (Boolean)
         forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
         forus.isTimeOnFaceNeeded = true / false (Boolean)
         forus.timestampColor = UIcolor.yellow (Color)
