@@ -106,8 +106,14 @@ import Forus
 class ViewController: UIViewController, ForusControllerDelegate {
 
     func forusControllerSuccess(_ scanner: ForusController, didFinishScanningWithResults results: forusResult) {
-         print("Forus Result: ", results)
-      
+          print("Forus Result: ", results)
+          let faceImage = results.faceResult   
+          let isFaceDetected = results.isFaceDetected  
+          let isSmileDetected = results.isSmileDetected  
+          let isEyeBlinkDetected = results.isEyeBlinkDetected   
+          let timeStamp = results.timeStamp   
+          let confidenceScore = results.confidence!   
+          let isFaceReal = results.isFaceReal ?? Bool()
     }
     
     func forusControllerDidCancel(_ scanner: ForusController) {
@@ -118,7 +124,7 @@ class ViewController: UIViewController, ForusControllerDelegate {
         print("Forus Error Code: ", error)
     }
     
-    }
+}
 ``` 
 
 ## Forus Result
