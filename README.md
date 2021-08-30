@@ -171,6 +171,7 @@ Error codes and their meaning are tabulated below
 - forus.callAntiSpoof = true / false (Boolean)    ***(Required)***
     
     If antispoof is needed have to pass true boolean.
+    
     If antispoof is not needed have to make it as false boolean.
     
  - forus.timeDuration = 8 (Int)  ***(Optional)***
