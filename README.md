@@ -174,7 +174,9 @@ Error codes and their meaning are tabulated below
     
  - forus.timeDuration = 8 (Int)  ***(Optional)***
      Default it is 8 sec if not set. 
+     
      If need to set maximum limit is 60sec and minimum is 8sec.
+     
      If time is not needed, timeout option is there need to make it as 0sec.
     
   - forus.isTimeOnFaceNeeded = true / false (Boolean) ***(Optional)***
