@@ -84,13 +84,14 @@ import Forus
 
 @objc func invokeForus(){
 
-     let forus = ForusController(delegate:self)
+     let forus = ForusController(showInstruction: true/false, delegate:self)     //If instruction page is needed should enable with "true" if not make it as "false"
         forus.modalPresentationStyle = .fullScreen
-        forus.licenceKey = "LICENCE_KEY"
+        forus.licenceKey = "YOUR-LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
         forus.callAntiSpoof = true / false (Boolean)
         forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
         forus.isTimeOnFaceNeeded = true / false (Boolean)
+        forus.timeDuration = 8. //Default it will be 8 sec, dynamically can add upto 60sec. If time is not needed then it should be 0.
         forus.timestampColor = UIcolor.yellow (Color)
         forus.timestampFontSize = 30.0 (CGfloat)
         forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (default) (String)
