@@ -167,7 +167,8 @@ Error codes and their meaning are tabulated below
   
     This mode offer liveness check through eyeblink detection on face
     
-  - forus.callAntiSpoof = true / false (Boolean)    ***(Required)***
+    
+- forus.callAntiSpoof = true / false (Boolean)    ***(Required)***
     
     If antispoof is needed have to pass true boolean.
     If antispoof is not needed have to make it as false boolean.
