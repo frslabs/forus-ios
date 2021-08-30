@@ -84,7 +84,7 @@ import Forus
 
 @objc func invokeForus(){
 
-     let forus = ForusController(showInstruction: true/false, delegate:self)     //If instruction page is needed should enable with "true" if not make it as "false"
+        let forus = ForusController(showInstruction: true/false, delegate:self)     //If instruction page is needed should enable with "true" if not make it as "false"
         forus.modalPresentationStyle = .fullScreen
         forus.licenceKey = "YOUR-LICENCE_KEY"
         forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
