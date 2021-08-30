@@ -130,6 +130,8 @@ class ViewController: UIViewController, ForusControllerDelegate {
     let isSmileDetected = results.isSmileDetected   // Boolean value for smile detection on face
     let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
     let timeStamp = results.timeStamp    // Timestamp, Int64 format 
+    let confidenceScore = results.confidence!   //Confidence score for face detected
+    let isFaceReal = results.isFaceReal ?? Bool()  //Returns "true" if face is real, returns "false" if face is fake.
      
 ```     
 
