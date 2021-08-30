@@ -166,6 +166,17 @@ Error codes and their meaning are tabulated below
   - forus.livenessMode = LivenessMode.eyeBlink.rawValue
   
     This mode offer liveness check through eyeblink detection on face
+    
+  - forus.callAntiSpoof = true / false (Boolean)    ***(Required)***
+    
+    If antispoof is needed have to pass true boolean.
+    If antispoof is not needed have to make it as false boolean.
+    
+ - forus.timeDuration = 8 (Int)  ***(Optional)***
+     Default it is 8 sec if not set. 
+     If need to set maximum limit is 60sec and minimum is 8sec.
+     If time is not needed, timeout option is there need to make it as 0sec.
+    
   - forus.isTimeOnFaceNeeded = true / false (Boolean) ***(Optional)***
   
      If we need time to show on face we need to pass true boolean.
@@ -180,6 +191,7 @@ Error codes and their meaning are tabulated below
  - forus.timestampColor = .white (Color) ***(Optional)***
  
     We can pass which ever color we want to display on Face.
+    
  - forus.timestampFontSize = 20.0 (Font) ***(Optional)***
  
      We can pass Font size for the timestamp Text.
@@ -187,6 +199,8 @@ Error codes and their meaning are tabulated below
  - forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (String) ***(Optional)***
      
      We can pass time Format for timestamp on Face.
+     
+
      
   
   
