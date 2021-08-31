@@ -77,6 +77,10 @@ import UIKit
 import Forus
 ```
 
+#### Supported AntiSpoof installation
+1. Download and drop ```model.trainneddata``` in tessdata folder of your project.
+2. Congratulations! 
+
 ## Usage example
 
 ```swift
