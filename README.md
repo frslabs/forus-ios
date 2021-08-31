@@ -50,7 +50,7 @@ platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
 pod 'Forus', '4.0.0'
-pod 'TensorFlowLiteSwift'
+pod 'TensorFlowLiteSwift', '2.6.0'
 end
 ```
 
