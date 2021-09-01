@@ -158,7 +158,6 @@ Error codes and their meaning are tabulated below
 | 308  | Transaction failed / Unable to ping |
 | 309  | Transaction limit exceeded                      |
 | 310  | No internet connection                          |
-| 311  | Required permission denied                      |
 
 ## Forus Parameters
 
