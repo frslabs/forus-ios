@@ -37,6 +37,7 @@ Once you have the license, follow the below instructions for a successful integr
 In Info.plist file add following code to allow your application to access iPhone's camera:
 ``<key>NSCameraUsageDescription</key>
 <string>Allow access to camera</string>``
+
 Location access :
 ``<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 <string>Allow access to location</string>
