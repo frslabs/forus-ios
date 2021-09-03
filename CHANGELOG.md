@@ -1,9 +1,12 @@
 
 # Changelog
 
+## **v4.0.2** - *03-09-2021*
+- Bug fixes.
+ 
 ## **v4.0.1** - *01-09-2021*
--  Performance improved
- - Bug fixes.
+- Performance improved
+- Bug fixes.
 
 ## **v4.0.0** - *27-08-2021*
  - Antispoof feature added.
