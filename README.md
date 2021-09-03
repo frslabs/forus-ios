@@ -97,7 +97,7 @@ import Forus
       forus.callAntiSpoof = true / false (Boolean)
       forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
       forus.isTimeOnFaceNeeded = true / false (Boolean)
-      forus.timeDuration = 8. //Default it will be 8 sec, dynamically can add upto 60sec. If time is not needed then it should be 0.
+      forus.timeDuration = 8 //Dynamically maximum can set upto 60sec, Minimum time can be set to 8sec. If time is not needed then it should be 0 (no timeout option). Default it will be 0 sec.
       forus.timestampColor = UIcolor.yellow (Color)
       forus.timestampFontSize = 30.0 (CGfloat)
       forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (default) (String)
