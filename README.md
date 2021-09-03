@@ -194,7 +194,7 @@ Error codes and their meaning are tabulated below
      
      If need to set maximum limit is 60sec and minimum is 8sec.
      
-     If time is not needed, timeout option is there need to make it as 0sec.
+     If time is not needed, no timeout option is there need to make it as 0sec.
     
   - forus.isTimeOnFaceNeeded = true / false (Boolean) ***(Optional)***
   
