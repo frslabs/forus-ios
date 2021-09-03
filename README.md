@@ -5,6 +5,10 @@
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
+Key features are,
+- Face and liveness detection
+- Anti-Spoof detection
+
 You can find the release history at [Changelog](CHANGELOG.md)
 
 # Table Of Content
