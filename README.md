@@ -84,10 +84,6 @@ import UIKit
 import Forus
 ```
 
-#### Supported AntiSpoof installation
-1. Download files which are attached and drop ```2.7_80x80_MiniFASNetV2.tflite```  & ```4_0_0_80x80_MiniFASNetV1SE.tflite``` in your project.
-2. Congratulations! 
-
 ## Usage example
 
 ```swift
