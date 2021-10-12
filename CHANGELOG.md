@@ -1,6 +1,9 @@
 
 # Changelog
 
+## **v4.0.4** - *12-10-2021*
+- Support for Xcode version 13.
+
 ## **v4.0.2** - *03-09-2021*
 - Bug fixes.
  
