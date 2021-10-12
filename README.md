@@ -56,7 +56,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it t
 ```ruby
 source 'https://gitlab.com/frslabs-public/ios/forus.git'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '11.0'
+platform :ios, '13.0'
 target '<Your Target Name>' do
 use_frameworks!
 pod 'Forus', '4.0.4'
