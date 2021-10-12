@@ -1,7 +1,7 @@
 
 # FORUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v4.0.2-blue)
+![version](https://img.shields.io/badge/version-v4.0.4-blue)
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
 
@@ -32,7 +32,7 @@ Once you have the license, follow the below instructions for a successful integr
 
 ## Minimum Requirements
 
-- Xcode 12.5
+- Xcode 13.0
 - iOS 12.0+
 - Swift 5.0
 
@@ -59,7 +59,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'Forus', '4.0.2'
+pod 'Forus', '4.0.4'
 pod 'TensorFlowLiteSwift', '2.6.0'
 end
 ```
