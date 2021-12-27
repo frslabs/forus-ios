@@ -1,5 +1,7 @@
 
 # Changelog
+## **v4.0.5** - *27-12-2021*
+- Swift & Xcode version update.
 
 ## **v4.0.4** - *12-10-2021*
 - Support for Xcode version 13.
