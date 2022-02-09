@@ -94,10 +94,10 @@ import Forus
 import Forus
 
 @objc func invokeForus(){
-      *let forus = ForusController(showInstruction: true/false, delegate:self)     //If instruction page is needed should enable with "true" if not make it as "false"
-      *forus.modalPresentationStyle = .fullScreen
-      *forus.licenceKey = "YOUR-LICENCE_KEY"
-      *forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
+      * let forus = ForusController(showInstruction: true/false, delegate:self)     //If instruction page is needed should enable with "true" if not make it as "false"
+      * forus.modalPresentationStyle = .fullScreen
+      * forus.licenceKey = "YOUR-LICENCE_KEY"
+      * forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
       forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue
       forus.callAntiSpoof = true / false (Boolean)
       forus.field1 = true / false (field1 is optional field for time can be added to watermark on face image)
@@ -107,7 +107,7 @@ import Forus
       forus.field3 = "" (field3 is optional field which can be added to watermark on face image) 
       forus.field4 = "" (field4 is optional field which can be added to watermark on face image) 
       forus.field5 = "" (field5 is optional field which can be added to watermark on face image) 
-      *present(forus, animated: false, completion: nil)
+      * present(forus, animated: false, completion: nil)
 }
 ```
 #### Handling the result
