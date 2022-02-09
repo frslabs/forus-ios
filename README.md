@@ -214,7 +214,7 @@ Error codes and their meaning are tabulated below
       
   - forus.field1 = true / false (Boolean) ***(Optional)***
   
-    - If we need time to show on face image as watermark we need to pass true boolean.
+    - If we need to display the time on face image as watermark we need to pass true boolean.
     
     - If not needed need to pass false.
      
@@ -224,25 +224,25 @@ Error codes and their meaning are tabulated below
      
  - forus.field2 = true / false (Boolean) ***(Optional)*** 
     
-    - If we need location to show on face image as watermark we need to pass true boolean.
+    - If we need to display the location on face image as watermark we need to pass true boolean.
     
     - If not needed need to pass false.
 
  - forus.field3 = "" (String) ***(Optional)*** 
  
-     -  If we need field3 to show on face image as watermark we need to pass String value
+     -  If we need to display the field3 on face image as watermark we need to pass String value
 
      -  field3 has a character limit of 20.
      
  - forus.field4 = "" (String) ***(Optional)*** 
  
-     -  If we need field4 to show on face image as watermark we need to pass String value.
+     -  If we need to display the field4 on face image as watermark we need to pass String value.
      
      -  field4 has a character limit of 20.
      
  - forus.field5 = "" (String) ***(Optional)*** 
  
-     -  If we need field5 to show on face image as watermark we need to pass String value.
+     -  If we need to display the field5 on face image as watermark we need to pass String value.
      
      -  field5 has a character limit of 40.
 
