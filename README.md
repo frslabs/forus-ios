@@ -3,7 +3,7 @@
 
 ![version](https://img.shields.io/badge/version-v4.0.6-blue)
 
-Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with compression, blur and exposure detection as standard.
+Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with active and passive liveness, compression, blur and exposure detection as standard.
 
 Key features are,
 - Face and liveness detection
