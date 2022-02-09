@@ -100,13 +100,13 @@ import Forus
       forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
       forus.callAntiSpoof = true / false (Boolean)
       forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue
-      forus.field1 = true / false (field1 is for time on face is needed or not)
+      forus.field1 = true / false (field1 is optional field for time can be added to watermark on face image)
       forus.timeDuration = 8 //Dynamically maximum can set upto 60sec, Minimum time can be set to 8sec. If time is not needed then it should be 0 (no timeout option). Default it will be 0 sec.
       forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (default) (String)
-      forus.field2 = true / false (field2 is for location on face is needed or not)
-      forus.field3 = "" (field3 is for custom text to display as watermark on image)
-      forus.field4 = "" (field4 is for custom text to display as watermark on image)
-      forus.field5 = "" (field5 is for custom text to display as watermark on image)
+      forus.field2 = true / false (field2 is optional field for location can be added to watermark on face image)
+      forus.field3 = "" (field3 is optional field which can be added to watermark on face image) 
+      forus.field4 = "" (field4 is optional field which can be added to watermark on face image) 
+      forus.field5 = "" (field5 is optional field which can be added to watermark on face image) 
       present(forus, animated: false, completion: nil)
 }
 ```
