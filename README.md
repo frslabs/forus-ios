@@ -124,8 +124,8 @@ class ViewController: UIViewController, ForusControllerDelegate {
          let isEyeBlinkDetected = results.isEyeBlinkDetected   
          let confidenceScore = results.confidence!   
          let isFaceReal = results.isFaceReal ?? Bool()
-         let timeStamp = results.timeStamp   
-         let locationValue = results.location ?? String()
+         let field1 = results.timeStamp   
+         let field2 = results.location ?? String()
          let field3 = results.field3 ?? String()
          let field4 = results.field4 ?? String()
          let field5 = results.field5 ?? String()
@@ -152,8 +152,8 @@ class ViewController: UIViewController, ForusControllerDelegate {
     let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
     let confidenceScore = results.confidence!   //Confidence score for face detected
     let isFaceReal = results.isFaceReal ?? Bool()  //Returns "true" if face is real, returns "false" if face is fake.
-    let timeStamp = results.timeStamp    // Timestamp is optional field which can be added to watermark on face image, Int64 format 
-    let locationValue = results.location  // Location is optional field which can be added to watermark on face image, String format
+    let field1 = results.timeStamp    // Timestamp is optional field which can be added to watermark on face image, Int64 format 
+    let field2 = results.location  // Location is optional field which can be added to watermark on face image, String format
     let field3 = results.field3 // field3 is optional field which can be added to watermark on face image , String format
     let field4 = results.field4 // field4 is optional field which can be added to watermark on face image , String format
     let field5 = results.field5 // field5 is optional field which can be added to watermark on face image , String format
