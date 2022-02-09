@@ -100,13 +100,13 @@ import Forus
       * forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
         forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue
         forus.callAntiSpoof = true / false (Boolean)
-        forus.field1 = true / false (field1 is optional field for time can be added to watermark on face image)
-        forus.timeDuration = 8 //Dynamically maximum can set upto 60sec, Minimum time can be set to 8sec. If time is not needed then it should be 0 (no timeout option). Default it will be 0 sec.
+        forus.field1 = true / false (Boolean) //(field1 is optional field for time can be added to watermark on face image)
+        forus.timeDuration = 8 (Int) //Dynamically maximum can set upto 60sec, Minimum time can be set to 8sec. If time is not needed then it should be 0 (no timeout option). Default it will be 0 sec.
         forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (default) (String)
-        forus.field2 = true / false (field2 is optional field for location can be added to watermark on face image)
-        forus.field3 = "" (field3 is optional field which can be added to watermark on face image) 
-        forus.field4 = "" (field4 is optional field which can be added to watermark on face image) 
-        forus.field5 = "" (field5 is optional field which can be added to watermark on face image) 
+        forus.field2 = true / false (Boolean) //(field2 is optional field for location can be added to watermark on face image) 
+        forus.field3 = "" (String) //(field3 is optional field with character limit 20 which can be added to watermark on face image) 
+        forus.field4 = "" (String) //(field4 is optional field with character limit 20 which can be added to watermark on face image) 
+        forus.field5 = "" (String) //(field5 is optional field with character limit 40 which can be added to watermark on face image) 
       * present(forus, animated: false, completion: nil)
 }
 ```
@@ -179,7 +179,7 @@ Error codes and their meaning are tabulated below
 
 - forus.licenceKey = "LICENCE KEY" ***(Required)***
 
-  Accepts the Forus licence key as a String
+  - Accepts the Forus licence key as a String
 
 - forus.livenessMode = LivenessMode.XXX  ***(Required)***
 
@@ -194,17 +194,17 @@ Error codes and their meaning are tabulated below
     
 - forus.callAntiSpoof = true / false (Boolean)    ***(Required)***
     
-    If antispoof is needed have to pass true boolean.
+  -  If antispoof is needed have to pass true boolean.
     
-    If antispoof is not needed have to make it as false boolean.
+  -  If antispoof is not needed have to make it as false boolean.
     
  - forus.timeDuration = 8 (Int)  ***(Optional)***
  
-     Default it is 0 sec if not set. 
+   -  Default it is 0 sec if not set. 
      
-     If need to set maximum limit is 60sec and minimum is 8sec.
+   -  If need to set maximum limit is 60sec and minimum is 8sec.
      
-     If time is not needed, no timeout option is there need to make it as 0sec.
+   -  If time is not needed, no timeout option is there need to make it as 0sec.
        
  - forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
 
@@ -231,14 +231,20 @@ Error codes and their meaning are tabulated below
  - forus.field3 = "" (String) ***(Optional)*** 
  
      -  If we need field3 to show on face image as watermark we need to pass String value
+
+     -  field3 has a character limit of 20.
      
  - forus.field4 = "" (String) ***(Optional)*** 
  
-     -  If we need field3 to show on face image as watermark we need to pass String value.
+     -  If we need field4 to show on face image as watermark we need to pass String value.
+     
+     -  field4 has a character limit of 20.
      
  - forus.field5 = "" (String) ***(Optional)*** 
  
-     -  If we need field3 to show on face image as watermark we need to pass String value.
+     -  If we need field5 to show on face image as watermark we need to pass String value.
+     
+     -  field5 has a character limit of 40.
 
  
 
