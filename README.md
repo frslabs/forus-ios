@@ -152,11 +152,11 @@ class ViewController: UIViewController, ForusControllerDelegate {
     let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
     let confidenceScore = results.confidence!   //Confidence score for face detected
     let isFaceReal = results.isFaceReal ?? Bool()  //Returns "true" if face is real, returns "false" if face is fake.
-    let timeStamp = results.timeStamp    // Timestamp, Int64 format 
-    let locationValue = results.location  // Location, String format
-    let field3 = results.field3 // field3 is for custom text to display as watermark on image , String format
-    let field4 = results.field4 // field4 is for custom text to display as watermark on image , String format
-    let field5 = results.field5 // field5 is for custom text to display as watermark on image , String format
+    let timeStamp = results.timeStamp    // Timestamp is optional field which can be added to watermark on face image, Int64 format 
+    let locationValue = results.location  // Location is optional field which can be added to watermark on face image, String format
+    let field3 = results.field3 // field3 is optional field which can be added to watermark on face image , String format
+    let field4 = results.field4 // field4 is optional field which can be added to watermark on face image , String format
+    let field5 = results.field5 // field5 is optional field which can be added to watermark on face image , String format
     
 ```     
 
@@ -205,30 +205,42 @@ Error codes and their meaning are tabulated below
      If need to set maximum limit is 60sec and minimum is 8sec.
      
      If time is not needed, no timeout option is there need to make it as 0sec.
-    
-  - forus.isTimeOnFaceNeeded = true / false (Boolean) ***(Optional)***
-  
-     If we need time to show on face we need to pass true boolean.
-     If not needed need to pass false.
-     
+       
  - forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
 
     - If we need camera mode Front then input should be "forus.setCamera = Utility.front.rawValue"
     
     - If we need camera mode Back then input should be "forus.setCamera = Utility.back.rawValue"
-
- - forus.timestampColor = .white (Color) ***(Optional)***
- 
-    We can pass which ever color we want to display on Face.
+      
+  - forus.field1 = true / false (Boolean) ***(Optional)***
+  
+    - If we need time to show on face image as watermark we need to pass true boolean.
     
- - forus.timestampFontSize = 20.0 (Font) ***(Optional)***
- 
-     We can pass Font size for the timestamp Text.
+    - If not needed need to pass false.
      
  - forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (String) ***(Optional)***
      
-     We can pass time Format for timestamp on Face.
+    - We can pass time Format for timestamp on Face.
      
+ - forus.field2 = true / false (Boolean) ***(Optional)*** 
+    
+    - If we need location to show on face image as watermark we need to pass true boolean.
+    
+    - If not needed need to pass false.
+
+ - forus.field3 = "" (String) ***(Optional)*** 
+ 
+     -  If we need field3 to show on face image as watermark we need to pass String value
+     
+ - forus.field4 = "" (String) ***(Optional)*** 
+ 
+     -  If we need field3 to show on face image as watermark we need to pass String value.
+     
+ - forus.field5 = "" (String) ***(Optional)*** 
+ 
+     -  If we need field3 to show on face image as watermark we need to pass String value.
+
+ 
 
      
   
