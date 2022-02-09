@@ -99,12 +99,14 @@ import Forus
       forus.licenceKey = "YOUR-LICENCE_KEY"
       forus.livenessMode = LivenessMode.smile.rawValue (smile) / LivenessMode.eyeBlink.rawValue (eyeblink) / LivenessMode.both.rawValue (smile and eyeblink)
       forus.callAntiSpoof = true / false (Boolean)
-      forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue 
-      forus.isTimeOnFaceNeeded = true / false (Boolean)
+      forus.setCamera = Utility.front.rawValue (default) / Utility.back.rawValue
+      forus.field1 = true / false (field1 is for time on face is needed or not)
       forus.timeDuration = 8 //Dynamically maximum can set upto 60sec, Minimum time can be set to 8sec. If time is not needed then it should be 0 (no timeout option). Default it will be 0 sec.
-      forus.timestampColor = UIcolor.yellow (Color)
-      forus.timestampFontSize = 30.0 (CGfloat)
       forus.timeFormat = "yyyy-MM-dd HH:mm:ss" (default) (String)
+      forus.field2 = true / false (field2 is for location on face is needed or not)
+      forus.field3 = "" (field3 is for custom text to display as watermark on image)
+      forus.field4 = "" (field4 is for custom text to display as watermark on image)
+      forus.field5 = "" (field5 is for custom text to display as watermark on image)
       present(forus, animated: false, completion: nil)
 }
 ```
@@ -120,9 +122,13 @@ class ViewController: UIViewController, ForusControllerDelegate {
          let isFaceDetected = results.isFaceDetected  
          let isSmileDetected = results.isSmileDetected  
          let isEyeBlinkDetected = results.isEyeBlinkDetected   
-         let timeStamp = results.timeStamp   
          let confidenceScore = results.confidence!   
          let isFaceReal = results.isFaceReal ?? Bool()
+         let timeStamp = results.timeStamp   
+         let locationValue = results.location ?? String()
+         let field3 = results.field3 ?? String()
+         let field4 = results.field4 ?? String()
+         let field5 = results.field5 ?? String()
     }
     
     func forusControllerDidCancel(_ scanner: ForusController) {
@@ -144,10 +150,14 @@ class ViewController: UIViewController, ForusControllerDelegate {
     let isFaceDetected = results.isFaceDetected   // Boolean value for face detection
     let isSmileDetected = results.isSmileDetected   // Boolean value for smile detection on face
     let isEyeBlinkDetected = results.isEyeBlinkDetected   // Boolean value for eye blink detectin on face
-    let timeStamp = results.timeStamp    // Timestamp, Int64 format 
     let confidenceScore = results.confidence!   //Confidence score for face detected
     let isFaceReal = results.isFaceReal ?? Bool()  //Returns "true" if face is real, returns "false" if face is fake.
-     
+    let timeStamp = results.timeStamp    // Timestamp, Int64 format 
+    let locationValue = results.location  // Location, String format
+    let field3 = results.field3 // field3 is for custom text to display as watermark on image , String format
+    let field4 = results.field4 // field4 is for custom text to display as watermark on image , String format
+    let field5 = results.field5 // field5 is for custom text to display as watermark on image , String format
+    
 ```     
 
 ## Forus Error Codes
