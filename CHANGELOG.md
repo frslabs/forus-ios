@@ -1,6 +1,9 @@
 
 # Changelog
 
+## **v4.0.7** - *13-04-2022*
+- Swift & Xcode 13.3.1 version update.
+
 ## **v4.0.6** - *09-02-2022*
 - Five optional fields added to watermark on face image.
 
