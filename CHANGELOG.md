@@ -1,5 +1,8 @@
 
 # Changelog
+## **v4.1.0** - *08-12-2022*
+- Swift & Xcode 14.1 version update.
+- Bug fixes.
 
 ## **v4.0.9** - *19-09-2022*
 - Swift & Xcode 14.0 version update.
