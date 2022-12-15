@@ -33,7 +33,7 @@ Once you have the license, follow the below instructions for a successful integr
 ## Minimum Requirements
 
 - Xcode 13.0
-- iOS 12.0+
+- iOS 13.0+
 - Swift 5.0
 
 ## Permission
