@@ -11,6 +11,8 @@ Key features are,
 
 You can find the release history at [Changelog](CHANGELOG.md)
 
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at Forus SDK `v4.1.1`. We have introduced a new license format. If you are using versions prior to `v4.1.1` and intend to update to `v4.1.1` or above please contact `support@frslabs.com` for an updated license.
+
 # Table Of Content
 - [Prerequisite](#prerequisite)
 - [Requirements](#requirements)
