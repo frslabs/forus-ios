@@ -1,7 +1,7 @@
 
 # FORUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v4.1.3-blue)
+![version](https://img.shields.io/badge/version-v4.2.0-blue)
 
 Forus SDK comes with a simple screen with multiple instructions to capture a perfect KYC compliant photograph. The SDK comes with active and passive liveness, compression, blur and exposure detection as standard.
 
