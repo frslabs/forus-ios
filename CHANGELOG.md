@@ -1,5 +1,8 @@
 
 # Changelog
+## **v4.2.6** - *12-09-2024*
+- Bug fixes.
+  
 ## **v4.2.5** - *24-06-2024*
 - Swift & Xcode 15.4 version update.
   
