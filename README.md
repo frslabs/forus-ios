@@ -62,7 +62,8 @@ platform :ios, '13.0'
 target '<Your Target Name>' do
 use_frameworks!
 pod 'Forus', '4.3.3'
-pod 'TensorFlowLiteSwift', '2.6.0'
+pod 'TensorFlowLiteSwift'
+pod 'TensorFlowLiteTaskVision'
 end
 ```
 
@@ -89,7 +90,9 @@ To get the full benefits import `Forus` wherever you import UIKit
 import UIKit
 import Forus
 ```
-
+### Octus Bundle
+  Download and unzip and drop ```Forus.bundle``` file has to be added to your project folder to get the assests of SDK into your App.
+  
 ## Usage example
 
 ```swift
