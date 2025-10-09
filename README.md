@@ -111,7 +111,8 @@ import Forus
         forus.field2 = true / false (Boolean) //(field2 is optional field for location can be added to watermark on face image) 
         forus.field3 = "" (String) //(field3 is optional field with character limit 20 which can be added to watermark on face image) 
         forus.field4 = "" (String) //(field4 is optional field with character limit 20 which can be added to watermark on face image) 
-        forus.field5 = "" (String) //(field5 is optional field with character limit 40 which can be added to watermark on face image) 
+        forus.field5 = "" (String) //(field5 is optional field with character limit 40 which can be added to watermark on face image)
+        forus.enableFaceMaskDetection = false / true (Optional) This feature SDK provides face mask detection capabilities.
       * present(forus, animated: false, completion: nil)
 }
 ```
@@ -134,6 +135,7 @@ class ViewController: UIViewController, ForusControllerDelegate {
          let field3 = results.field3 ?? String()
          let field4 = results.field4 ?? String()
          let field5 = results.field5 ?? String()
+         let isFaceMaskDetected = results.isMaskDetected
     }
     
     func forusControllerDidCancel(_ scanner: ForusController) {
@@ -162,7 +164,7 @@ class ViewController: UIViewController, ForusControllerDelegate {
     let field3 = results.field3 // field3 is optional field which can be added to watermark on face image , String format
     let field4 = results.field4 // field4 is optional field which can be added to watermark on face image , String format
     let field5 = results.field5 // field5 is optional field which can be added to watermark on face image , String format
-    
+    let isFaceMaskDetected = results.isMaskDetected // The face mask result is a boolean value where true means it detects face mask.
 ```     
 
 ## Forus Error Codes
@@ -252,7 +254,9 @@ Error codes and their meaning are tabulated below
      -  field5 has a character limit of 40.
 
  
-
+- forus.enableFaceMaskDetection = false / true (Boolean) ***(Optional)***
+  
+    - This feature SDK provides face mask detection capabilities and result is a boolean value where true means it detects face mask.
      
   
   
