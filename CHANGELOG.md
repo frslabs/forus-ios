@@ -1,5 +1,11 @@
 
 # Changelog
+## **v4.3.5** - *09-12-2025*
+- Swift & Xcode 26.1.1 version with OS 26.1 update.
+
+## **v4.3.7** - *09-12-2025*
+- Swift & Xcode 16.4 version with OS 26.1 update.
+  
 ## **v4.3.4** - *09-10-2025*
 - Swift & Xcode 26.0 version update.
 - Face mask detection feature added.
