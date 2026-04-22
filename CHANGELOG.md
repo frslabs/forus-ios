@@ -1,5 +1,8 @@
 
 # Changelog
+## **v4.4.0** - *22-04-2026*
+- Bug fixes
+  
 ## **v4.3.9** - *20-04-2026*
 - Swift & Xcode 26.4.1 version with OS 26.4.1 update.
   
