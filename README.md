@@ -77,13 +77,13 @@ post_install do |installer|
   end
 end
 ```
-### Simulator Compatibility Note
+## Simulator Compatibility (Apple Silicon Macs)
 
-For Apple Silicon (M1/M2/M3) Mac environments, some third-party dependencies used by the SDK currently have limited native ARM64 simulator support.
+For Apple Silicon environments (M1 / M2 / M3 Macs), some third-party dependencies used by the SDK currently have limited native ARM64 simulator support.
 
-As a temporary workaround, the Podfile configuration above excludes `arm64` for simulator builds.
+As a temporary workaround, the above Podfile configuration excludes `arm64` for simulator builds.
 
-This enables successful simulator compilation by running the iOS Simulator under Rosetta (`x86_64`) mode.
+This enables successful simulator compilation by running the iOS Simulator using **Rosetta (`x86_64`) translation mode**.
 
 After updating the Podfile, run:
 
@@ -92,11 +92,12 @@ rm -rf Pods Podfile.lock
 pod install
 ```
 
-### Important Notes
+## Important Notes
 
 - Physical iOS device builds are fully supported.
-- Simulator execution will work using Rosetta translation mode.
-- Native Apple Silicon simulator (`arm64`) support depends on third-party library compatibility.
+- Simulator compilation is supported using Rosetta mode.
+- Native Apple Silicon (`arm64`) simulator support currently depends on third-party library compatibility.
+
 ###### Save/Edit Netrc settings to install custom pod
 
 You will need a valid netrc credentials to install forus from maven, which can be obtained by contacting `support@frslabs.com`. 
