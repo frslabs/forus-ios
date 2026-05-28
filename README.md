@@ -94,24 +94,6 @@ post_install do |installer|
 
 end
 ```
-
-Install dependencies:
-
-```bash
-pod install
-```
-
-Open the generated `.xcworkspace` file after installation.
-
-## Notes
-
-* Minimum supported iOS version: **13.0**
-* `use_frameworks!` is required.
-* `TensorFlowLiteTaskVision` requires simulator architecture exclusion for compatibility during simulator builds.
-* Simulator architecture configuration is applied to both pod targets and application targets to ensure successful simulator compilation.
-* Full SDK validation is recommended on a physical iOS device.
-
-```
 ## Simulator Compatibility (Apple Silicon Macs)
 
 For Apple Silicon environments (M1 / M2 / M3 Macs), some third-party dependencies used by the SDK currently have limited native ARM64 simulator support.
