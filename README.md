@@ -56,7 +56,7 @@ Location access :
 You can use [CocoaPods](http://cocoapods.org/) to install `Forus` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '13.0'
+platform :ios, '15.0'
 
 source 'https://gitlab.com/frslabs-public/ios/forus.git'
 source 'https://github.com/CocoaPods/Specs.git'
@@ -68,30 +68,12 @@ target 'YOUR_TARGET_NAME' do
   pod 'TensorFlowLiteSwift'
   pod 'TensorFlowLiteTaskVision'
 end
-
 post_install do |installer|
-
-  simulator_x86_targets = [
-    'TensorFlowLiteTaskVision'
-  ]
-
-  installer.pods_project.targets.each do |target|
-    if simulator_x86_targets.include?(target.name)
+    installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
-        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-      end
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
     end
   end
-
-  installer.aggregate_targets.each do |aggregate_target|
-    aggregate_target.user_project.native_targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-      end
-    end
-    aggregate_target.user_project.save
-  end
-
 end
 ```
 ## Simulator Compatibility (Apple Silicon Macs)
