@@ -1,5 +1,8 @@
 
 # Changelog
+## **v4.4.1** - *07-10-2026*
+- Swift & Xcode 27.0 version.
+  
 ## **v4.4.1** - *23-07-2026*
 - Swift & Xcode 26.6 version.
 - Face score improvisation.
